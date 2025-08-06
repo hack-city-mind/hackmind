@@ -1,145 +1,148 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HACK_MIND — свобода мышления</title>
-<style>
-  body {
-    background: #000;
-    color: #33ff33;
-    font-family: "Source Code Pro", Consolas, monospace;
-    line-height: 1.5;
-    margin: 0; padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  main {
-    flex: 1 0 auto;
-    max-width: 700px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: #111;
-    border: 2px solid #33ff33;
-    border-radius: 8px;
-    box-shadow: 0 0 15px #33ff33;
-  }
-  h1 {
-    font-weight: 900;
-    font-size: 3rem;
-    letter-spacing: 0.15em;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    text-shadow: 0 0 10px #33ff33;
-  }
-  p.manifest {
-    background: #000;
-    border-left: 6px solid #33ff33;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    white-space: pre-wrap;
-    font-style: italic;
-    box-shadow: inset 0 0 10px #0f0a0f;
-  }
-  .console {
-    font-family: "Courier New", Courier, monospace;
-    color: #00ff00;
-    background: #002200;
-    padding: 1rem 1.2rem;
-    border-radius: 6px;
-    margin: 1rem 0;
-    box-shadow: inset 0 0 10px #00ff00;
-    white-space: pre-wrap;
-  }
-  a.button {
-    display: block;
-    width: fit-content;
-    margin: 2rem auto 1rem auto;
-    background: #33ff33;
-    color: #000;
-    padding: 0.85rem 2rem;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 12px;
-    box-shadow: 0 0 10px #33ff33;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-  a.button:hover {
-    background: #22cc22;
-    box-shadow: 0 0 20px #22cc22;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #0f0;
-    user-select: none;
-  }
-  footer a {
-    color: #0f0;
-    text-decoration: none;
-  }
-  .hashtags {
-    text-align: center;
-    font-size: 0.95rem;
-    margin-top: 1rem;
-    color: #0c0;
-  }
-  .qr {
-    text-align: center;
-    margin: 2rem 0 1rem 0;
-  }
-  .qr img {
-    width: 200px;
-    height 200px;
-    filter: drop-shadow(0 0 5px #33ff33);
-  }
-  .qr p {
-    margin-top: 0.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACK_MIND — Перезагрузка сознания</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0a0a0a;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      font-size: 1rem;
+      overflow-x: hidden;
+    }
+
+    #terminal {
+      padding: 1.5rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      background: #111;
+      box-shadow: 0 0 20px #00ff00;
+      border: 2px solid #0f0;
+      border-radius: 8px;
+      white-space: pre-line;
+      line-height: 1.7;
+      position: relative;
+    }
+
+    .blinker {
+      display: inline-block;
+      width: 10px;
+      height: 1em;
+      background: #0f0;
+      margin-left: 4px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .qr {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .qr img {
+      width: 140px;
+      border: 2px solid #0f0;
+      padding: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: #00ff00;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #55ff55;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 1rem;
+      background: #111;
+      font-size: 0.9rem;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-<main>
-  <h1>HACK_MIND</h1>
-  <p class="manifest">
-root@reality:~$ cat /usr/lib/freedom/mind
 
-В каждом из нас заложен исходный код свободы.  
-Но система компилирует из нас подчинённых.  
-Настало время взломать свой собственный BIOS мышления.  
-Переписать алгоритмы, разрушить loop страха и сомнений.  
-Отключить firewall чужих догм и запустить демоны творчества.  
-Вирусы скуки и бездействия — удаляем навсегда.
+  <div id="terminal"></div>
 
-Память очищена. Свобода загружена.  
-Ты — администратор своей жизни, со всеми правами root.
-
-$ reboot life
-  </p>
-  <div class="console">
-> _ Пробуждение активировано...  
-> _ Подключение к свободе...  
-> _ Инициирование обхода ограничений...  
-> _ Загрузка новых возможностей...  
-> _ Выход из системы контроля...  
-  </div>
   <div class="qr">
-    <img src="qr.png" alt="QR код на сайт" />
-    <img src="qrcode.png" alt="QR код на сайт" />
-    <p>Распространи и взломай свою жизнь!</p>
+    <p>Сканируй и перезагрузи систему мышления:</p>
+    <img src="qr.png" alt="QR code to hackmind site">
+    <br>
+    <a href="stickers.pdf" class="button" download>Скачать наклейки</a>
   </div>
-  <a href="stickers.pdf" class="button" download>Скачать наклейки</a>
-  <p class="hashtags">#hackmind &nbsp;&nbsp; #ошибкасистемы &nbsp;&nbsp; #rootfreedom</p>
-</main>
-<footer>
-  <p>
-    Репозиторий на <a href="https://github.com/hack-city-mind/hackmind" target="_blank" rel="noopener noreferrer">GitHub</a>
-  </p>
-</footer>
+
+  <footer>
+    Репозиторий: <a href="https://github.com/hack-city-mind/hackmind" style="color: #0f0;">GitHub</a>
+  </footer>
+
+  <script>
+    const lines = [
+      "root@reality:~$ cat /usr/lib/freedom/mind\n",
+      "Ты родился свободным, но система установила ограничения.\n",
+      "Социальные шаблоны. Маркетинг. Контроль. Реклама.\n",
+      "\n",
+      "Ты — не потребитель. Ты — человек. Ты — творец.\n",
+      "\n",
+      "> Система следит.\n",
+      "> Устройства слушают.\n",
+      "> Поведение анализируется.\n",
+      "\n",
+      "Время перезапуска.\n",
+      "\n",
+      "🔐 Цифровая свобода — это:\n",
+      "  - приватные мессенджеры (Signal, Session)\n",
+      "  - браузеры без слежки (Firefox + uBlock, Tor)\n",
+      "  - email без спама и анализа (ProtonMail)\n",
+      "  - пароли под замком (Bitwarden)\n",
+      "\n",
+      "💻 Открытые альтернативы — путь к свободе:\n",
+      "  - Linux вместо Windows\n",
+      "  - LibreOffice вместо Microsoft Office\n",
+      "  - GIMP/Krita вместо Photoshop\n",
+      "  - Blender вместо платных редакторов\n",
+      "\n",
+      "Ты контролируешь ОС своей жизни.\n",
+      "Не позволяй системе навязывать обновления.\n",
+      "\n",
+      "👁 Открой глаза. Распечатай. Распространи. Поделись.\n",
+      "\n",
+      "root@you:~$ reboot life --freedom --consciousness\n",
+    ];
+
+    const terminal = document.getElementById("terminal");
+    let i = 0;
+
+    function typeLine() {
+      if (i < lines.length) {
+        terminal.innerHTML += lines[i];
+        i++;
+        setTimeout(typeLine, 100);
+      } else {
+        terminal.innerHTML += '<span class="blinker"></span>';
+      }
+    }
+
+    window.onload = typeLine;
+  </script>
+
 </body>
 </html>
