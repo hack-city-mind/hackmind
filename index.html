@@ -6,11 +6,11 @@
 <title>HACK_MIND — свобода мышления</title>
 <style>
   body {
-    background: #121212;
-    color: #eee;
-    font-family: "Consolas", monospace, monospace;
-    line-height: 1.6;
-    margin: 0; padding: 0;
+    background: #000;
+    color: #33ff33;
+    font-family: "Source Code Pro", Consolas, monospace;
+    line-height: 1.5;
+    margin: 0; padding: 1rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -20,55 +20,86 @@
     max-width: 700px;
     margin: 2rem auto;
     padding: 0 1rem;
+    background: #111;
+    border: 2px solid #33ff33;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #33ff33;
   }
   h1 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.3rem;
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px #33ff33;
   }
   p.manifest {
-    background: #222;
-    border-left: 4px solid #0f0;
+    background: #000;
+    border-left: 6px solid #33ff33;
     padding: 1rem 1.5rem;
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
-    white-space: pre-line;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+    font-style: italic;
+    box-shadow: inset 0 0 10px #0f0a0f;
+  }
+  .console {
+    font-family: "Courier New", Courier, monospace;
+    color: #00ff00;
+    background: #002200;
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    box-shadow: inset 0 0 10px #00ff00;
+    white-space: pre-wrap;
   }
   a.button {
-    display: inline-block;
-    background: #0f0;
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 1rem auto;
+    background: #33ff33;
     color: #000;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
+    padding: 0.85rem 2rem;
     font-weight: 700;
-    border-radius: 6px;
-    margin-bottom: 2rem;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #33ff33;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
   }
   a.button:hover {
-    background: #0c0;
+    background: #22cc22;
+    box-shadow: 0 0 20px #22cc22;
   }
   footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
-    background: #181818;
-    flex-shrink: 0;
+    color: #0f0;
+    user-select: none;
   }
   footer a {
     color: #0f0;
     text-decoration: none;
   }
+  .hashtags {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    color: #0c0;
+  }
   .qr {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem 0 1rem 0;
   }
-  .hashtags {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 1rem;
-    text-align: center;
+  .qr img {
+    width: 130px;
+    height: 130px;
+    filter: drop-shadow(0 0 5px #33ff33);
+  }
+  .qr p {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
   }
 </style>
 </head>
@@ -76,27 +107,30 @@
 <main>
   <h1>HACK_MIND</h1>
   <p class="manifest">
-Мы живём в эпоху информационного шума, алгоритмов и имитации выбора.
-Нас заставляют быть предсказуемыми, послушными, управляемыми.
+root@reality:~$ cat /usr/lib/freedom/mind
 
-Но ты не кусок кода. Ты — программист.
+В каждом из нас заложен исходный код свободы.  
+Но система компилирует из нас подчинённых.  
+Настало время взломать свой собственный BIOS мышления.  
+Переписать алгоритмы, разрушить loop страха и сомнений.  
+Отключить firewall чужих догм и запустить демоны творчества.  
+Вирусы скуки и бездействия — удаляем навсегда.
 
-Ты помнишь, каким был в 17? Куда хотел двигаться? Что хотел взломать?  
-Свободу? Систему? Жизнь?  
-Это всё еще возможно.
+Память очищена. Свобода загружена.  
+Ты — администратор своей жизни, со всеми правами root.
 
-В каждом из нас есть root-доступ.  
-К мышлению. К реальности. К себе.
-
-Этот проект — не про протест.  
-Это про пробуждение.  
-Про осознанность. Про возвращение контроля.
-
-Хочешь жить по алгоритму? Или хочешь переписать код?
+$ reboot life
   </p>
+  <div class="console">
+> _ Пробуждение активировано...  
+> _ Подключение к свободе...  
+> _ Инициирование обхода ограничений...  
+> _ Загрузка новых возможностей...  
+> _ Выход из системы контроля...  
+  </div>
   <div class="qr">
-    <img src="qr-code.png" alt="QR код на сайт" width="120" height="120" />
-    <p>Распространи и взломай свою жизнь!</p>
+    <img src="qr-code.png" alt="QR код на сайт" />
+    <p>Сканируй и подключайся к движению</p>
   </div>
   <a href="stickers.pdf" class="button" download>Скачать наклейки</a>
   <p class="hashtags">#hackmind &nbsp;&nbsp; #ошибкасистемы &nbsp;&nbsp; #rootfreedom</p>
